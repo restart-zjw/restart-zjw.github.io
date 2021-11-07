@@ -17,6 +17,7 @@
         table{
             margin-left: 30px;
             text-align: center;
+
         }
         tr{
             height: 40px;
@@ -89,15 +90,34 @@
                 </tr>
                 <tr>
                     <td>用户名</td>
-                    <td><input type="text" required="required" style="margin-left: 10px"></td>
+                    <td>
+                        <input id="username" type="text" required="required" style="margin-left: 10px" onfocus="displayInfo();" onblur="checkName();" ><span id="info_name_flag"></span>
+
+                    </td>
+                </tr>
+                <tr style="height: 22px">
+                    <td></td>
+                    <td><div id="info_name" style="font-size: 5px;text-align: left"></div></td>
                 </tr>
                 <tr>
                     <td>设置密码</td>
-                    <td><input type="password" required="required"></td>
+                    <td>
+                        <input id="userpsd" type="password" required="required" onfocus="displayPsd();" onblur="checkPassword(1);" ><span id="info_password_flag"></span>
+                    </td>
+                </tr>
+                <tr style="height: 22px">
+                    <td></td>
+                    <td><div id="info_password" style="font-size: 5px;text-align: left"></div></td>
                 </tr>
                 <tr>
                     <td>确认密码</td>
-                    <td><input type="password" required="required"></td>
+                    <td>
+                        <input id="userrepsd" type="password" required="required" onfocus="displayRePsd();" onblur="checkPassword(2);"><span id="info_repassword_flag"></span>
+                    </td>
+                </tr>
+                <tr style="height: 22px">
+                    <td></td>
+                    <td><div id="info_repassword" style="font-size: 5px; text-align: left"></div></td>
                 </tr>
                 <tr>
                     <td class="title">企业及联系人信息</td>
